@@ -286,7 +286,7 @@ eventstream_widget = {
     "dataSeriesTemplates": None,
     "useTimeline": True,
     "eventFilterTemplate": {
-        "applicationName": "myAudi-Portal",
+        "applicationName": "",
         "healthRuleNames": None,
         "eventTypes": [
             "POLICY_OPEN_WARNING",
@@ -309,9 +309,9 @@ eventstream_widget = {
         "specificEntityNamesByType": {
             "APPLICATION_COMPONENT": [
                 {
-                    "applicationName": "myAudi-Portal",
+                    "applicationName": "",
                     "entityType": "APPLICATION_COMPONENT",
-                    "entityName": "079_MYAUDP_Live2",
+                    "entityName": "",
                     "scopingEntityType": None,
                     "scopingEntityName": None,
                     "subtype": None
