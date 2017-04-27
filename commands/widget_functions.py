@@ -1,6 +1,8 @@
 from commands.templates import widgets
+from util import CommandInvocationError, CommandExecutionError
 import copy
 import json
+import requests
 
 
 # Create a text widget
@@ -147,3 +149,16 @@ def create_dashboard_file(filename, dashboard):
     dashboard_file.write(json.dumps(dashboard, indent=4))
     dashboard_file.close()
     return filename
+
+# Post dashboard json file to Controller in order to import new Dashboard
+def post_dashboard_file(filename, **kwargs):
+    files = {'file': (filename, open(filename, 'rb'), 'application/json')}
+    endpoint = 'http://%s/controller/CustomDashboardImportExportServlet' \
+        % (kwargs['controllerHost'])
+    try:
+        r = requests.post(endpoint,
+                          auth=(kwargs['username'], kwargs['password']),
+                          files=files)
+        return r._content
+    except Exception as e:
+        raise CommandInvocationError('Error posting dashboard JSON.')

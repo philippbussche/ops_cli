@@ -104,3 +104,4 @@ def command(options, args):
     for key in status_dashboards:
         file_name = 'dashboard_output/status_dashboard_%s.json' % (key)
         create_dashboard_file(file_name, status_dashboards[key])
+        post_dashboard_file(file_name, **options)
