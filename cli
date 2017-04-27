@@ -1,0 +1,13 @@
+#!python/bin/python2.7
+# -*- coding: utf-8 -*-
+
+# Copyright (c) AppDynamics, Inc., and its affiliates
+# 2015
+# All Rights Reserved
+
+import sys
+
+from main import main
+
+if __name__ == '__main__':
+    sys.exit(main())
