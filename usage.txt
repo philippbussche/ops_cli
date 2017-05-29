@@ -1,0 +1,13 @@
+USAGE
+    cli <command> <args...>
+
+ABOUT
+    AppDynamics health rule and dashboard management utility
+
+COMMANDS
+    help                Print this message
+    help <command>      Show detailed help for the given cli command
+
+    create_hr_infrastructure  Create set of standard health rules for monitoring application infrastructure.
+    create_hr_transaction  Create set of standard health rules for monitoring key transactions.
+    create_dashboard    Create a standard dashboard for each tier in the application.
